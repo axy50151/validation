@@ -54,8 +54,15 @@
 </form>
 
 		  
-          <button type="submit" class="btn btn-primary addValue">Submit</button>
+          <button id="submitBtn" disabled type="submit" class="btn btn-primary addValue">Submit</button>
+	
         </form>
+	    
+	    <script>
+		    function recaptchaCallback() {
+              $('#submitBtn').removeAttr('disabled');
+};
+	    </script>
       </div>
       <div class="col-md-6">
         <ul id="contacts" class="list-group">
